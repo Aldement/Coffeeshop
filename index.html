@@ -5,27 +5,249 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Coffee</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
     <header>
-        <h1> The Coffee </h1>
+        <h1>The Coffee</h1>
+        <button class="coffee-btn" id="coffeeBtn">☕</button>
+        <nav class="mobile-nav" id="mobileNav">
+            <a class='scroll' href="#menu-section">Меню</a>
+            <a class='scroll' href="#about-section">О нас</a>
+            <a class='scroll' href="#beans-section">Кофейные зерна</a>
+            <a href="registration.html">Регистрация</a>
+        </nav>
     </header>
-    <div class="container">
-        <img src="https://cdn.shopify.com/s/files/1/0801/7530/0936/files/WK_Social_10062022_4_2048x2048.png?v=1711995048">
-        <p>Добро пожаловать на сайт нашего кафе The Coffee! Мы готовим кофе с любовью. 
-        Каждая чашка - это особый момент, который каждый должен переживать каждый день!
-        </p>
-        <span>
-            Здесь Вы сможете узнать историю нашей кафешки,
-        наш способ обжарки, поставщик наших кофейных зерн и их родина.
-        А так же можете посмотреть наше меню или заказать напитки или кофейные зерна.
-        </span>
-        <div class="buttons">
-            <a href="" class="button_menu">Посмотреть меню</a>
-            <a href="" class="button_us">О нас</a>
-            <a href="" class="button_beans">Наши кофейные зерна</a>
-            <a href="" class="button_registration">Зарегестрироваться</a>
+
+    <main>
+        <div class="container">
+            <img src="https://cdn.shopify.com/s/files/1/0801/7530/0936/files/WK_Social_10062022_4_2048x2048.png?v=1711995048">
+            <p>Добро пожаловать на сайт нашего кафе The Coffee! Мы готовим кофе с любовью. 
+            Каждая чашка - это особый момент, который каждый должен переживать каждый день!
+            </p>
+            <span>
+                Здесь Вы сможете узнать историю нашей кафешки,
+                наш способ обжарки, поставщик наших кофейных зерн и их родина.
+                А так же можете посмотреть наше меню или заказать напитки или кофейные зерна.
+            </span>
+            <div class="buttons">
+                <a href="#menu-section" class="button-menu">Посмотреть меню</a>
+                <a href="#about-section" class="button-us">О нас</a>
+                <a href="#beans-section" class="button-beans">Наши кофейные зерна</a>
+                <a href="registration.html" class="button-registration">Зарегистрироваться</a>
+            </div>
         </div>
-    </div>
+
+        <section id="menu-section" class="section">
+            <h2>Наше меню</h2>
+
+            <h3 class="menu-category">☕ Кофейные напитки</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="menu-name">Эспрессо</span>
+                    <span class="menu-desc">Классический крепкий кофе, насыщенный и ароматный</span>
+                    <span class="menu-price">2.50€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Двойной эспрессо</span>
+                    <span class="menu-desc">Двойная порция эспрессо для настоящих ценителей</span>
+                    <span class="menu-price">3.50€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Американо</span>
+                    <span class="menu-desc">Эспрессо с горячей водой, мягкий и лёгкий</span>
+                    <span class="menu-price">3.00€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Капучино</span>
+                    <span class="menu-desc">Эспрессо с молоком и нежной пенкой</span>
+                    <span class="menu-price">3.80€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Латте</span>
+                    <span class="menu-desc">Мягкий кофе с большим количеством молока</span>
+                    <span class="menu-price">4.00€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Флэт Уайт</span>
+                    <span class="menu-desc">Двойной эспрессо с бархатистым молоком</span>
+                    <span class="menu-price">4.20€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Макиато</span>
+                    <span class="menu-desc">Эспрессо с небольшой капелькой молочной пены</span>
+                    <span class="menu-price">3.20€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Раф</span>
+                    <span class="menu-desc">Эспрессо со сливками и ванильным сахаром</span>
+                    <span class="menu-price">4.50€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Колд Брю</span>
+                    <span class="menu-desc">Кофе холодного заваривания, 12 часов настойки</span>
+                    <span class="menu-price">4.80€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Айс Латте</span>
+                    <span class="menu-desc">Холодный латте со льдом, освежающий и нежный</span>
+                    <span class="menu-price">4.50€</span>
+                </div>
+            </div>
+
+            <h3 class="menu-category">🥤 Другие напитки</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="menu-name">Матча Латте</span>
+                    <span class="menu-desc">Японский зелёный чай с молоком</span>
+                    <span class="menu-price">4.50€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Горячий шоколад</span>
+                    <span class="menu-desc">Насыщенный бельгийский шоколад с молоком</span>
+                    <span class="menu-price">4.00€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Лимонад</span>
+                    <span class="menu-desc">Свежевыжатый лимон, мята и газированная вода</span>
+                    <span class="menu-price">3.50€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Чай на выбор</span>
+                    <span class="menu-desc">Чёрный, зелёный, травяной или фруктовый</span>
+                    <span class="menu-price">2.80€</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Апельсиновый сок</span>
+                    <span class="menu-desc">Свежевыжатый сок из спелых апельсинов</span>
+                    <span class="menu-price">3.80€</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section" class="section section-dark">
+            <h2>О нас</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <span class="about-icon">☕</span>
+                    <h3>Наша история</h3>
+                    <p>The Coffee открылся в 2018 году в Риге. Всё началось с маленькой мечты — создать место, где каждый человек может найти свою идеальную чашку кофе. Сегодня мы — одна из самых любимых кофеен города.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-icon">💡</span>
+                    <h3>Наша идея</h3>
+                    <p>Мы верим, что кофе — это не просто напиток, а целый ритуал. Наша идея проста: использовать только лучшие зёрна, готовить с душой и создавать атмосферу, в которой хочется задержаться.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-icon">🏆</span>
+                    <h3>Наши ценности</h3>
+                    <p>Качество, честность и забота о людях — вот что лежит в основе всего, что мы делаем. Мы работаем напрямую с фермерами, платим справедливую цену и заботимся об окружающей среде.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-icon">👨‍🍳</span>
+                    <h3>Наша команда</h3>
+                    <p>Наши бариста — настоящие профессионалы с многолетним опытом. Каждый из них прошёл обучение в лучших школах бариста Европы и влюблён в своё дело.</p>
+                </div>
+            </div>
+            <div class="team-slider">
+                <div class="team-card">
+                    <img src="Images/TheCoffee_CEO.jpg">
+                    <h3>Александр</h3>
+                    <p>Владелец</p>
+                    <span>Основал The Coffee в 2018</span>
+                </div>
+                <div class="team-card">
+                    <img src="Images/TheCoffee_head_barista.jpg">
+                    <h3>Алексей</h3>
+                    <p>Старший бариста</p>
+                    <span>5 лет опыта · Чемпион латте-арта 2022</span>
+                </div>
+                <div class="team-card">
+                    <img src="Images/TheCoffee_barista_1.jpg">
+                    <h3>Мария</h3>
+                    <p>Бариста</p>
+                    <span>3 года опыта · Специалист по сервису</span>
+                </div>
+                <div class="team-card">
+                    <img src="Images/TheCoffee_warmer.jpg">
+                    <h3>Иван</h3>
+                    <p>Обжарщик</p>
+                    <span>7 лет опыта · Работал в Колумбии</span>
+                </div>
+                <div class="team-card">
+                    <img src="Images/TheCoffee_director.jpg">
+                    <h3>София</h3>
+                    <p>Директор кафе</p>
+                    <span>Заместитель Александра</span>
+                </div>
+            </div>  
+        </section>
+
+        <section id="beans-section" class="section">
+            <h2>Наши кофейные зерна</h2>
+            <div class="beans-grid">
+                <div class="beans-card">
+                    <h3>🇪🇹 Эфиопия — Иргачеффе</h3>
+                    <p><strong>Происхождение:</strong> Высокогорье Иргачеффе, 1800–2200 м над уровнем моря</p>
+                    <p><strong>Вкус:</strong> Черника, жасмин, цитрус, яркая кислотность</p>
+                    <p><strong>Обжарка:</strong> Светлая — раскрывает фруктовые и цветочные ноты</p>
+                    <p><strong>Метод обработки:</strong> Натуральный (сухой)</p>
+                </div>
+                <div class="beans-card">
+                    <h3>🇨🇴 Колумбия — Уила</h3>
+                    <p><strong>Происхождение:</strong> Регион Уила, Южная Колумбия</p>
+                    <p><strong>Вкус:</strong> Карамель, красное яблоко, молочный шоколад</p>
+                    <p><strong>Обжарка:</strong> Средняя — баланс сладости и тела</p>
+                    <p><strong>Метод обработки:</strong> Мытый (влажный)</p>
+                </div>
+                <div class="beans-card"> 
+                    <h3>🇾🇪 Йемен — Мокка</h3>
+                    <p><strong>Происхождение:</strong> Горные террасы Йемена, древнейший сорт</p>
+                    <p><strong>Вкус:</strong> Тёмный шоколад, специи, табак, вино</p>
+                    <p><strong>Обжарка:</strong> Тёмная — насыщенная и глубокая</p>
+                    <p><strong>Метод обработки:</strong> Натуральный, традиционный</p>
+                </div>
+            </div>
+
+            <div class="roast-info">
+                <h3>Наш процесс обжарки</h3>
+                <div class="roast-steps">
+                    <div class="roast-step">
+                        <span class="step-num">01</span>
+                        <h4>Отбор</h4>
+                        <p>Каждая партия зёрен вручную проверяется на качество перед обжаркой</p>
+                    </div>
+                    <div class="roast-step">
+                        <span class="step-num">02</span>
+                        <h4>Обжарка</h4>
+                        <p>Обжариваем небольшими партиями при точной температуре 200–230°C</p>
+                    </div>
+                    <div class="roast-step">
+                        <span class="step-num">03</span>
+                        <h4>Дегустация</h4>
+                        <p>Каждая партия проходит каппинг — профессиональную дегустацию</p>
+                    </div>
+                    <div class="roast-step">
+                        <span class="step-num">04</span>
+                        <h4>Упаковка</h4>
+                        <p>Зёрна упаковываются в течение 48 часов после обжарки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#menu-section">Меню</a>
+            <a href="#about-section">О нас</a>
+            <a href="#beans-section">Кофейные зерна</a>
+        </div>
+        <p class="footer-text">© 2025 The Coffee</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
